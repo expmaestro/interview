@@ -9,6 +9,7 @@ namespace ConsoleApp1.Modules
 {
     class Person
     {
+        public int Id { get; set; }
         public string Name { get; set; }
     }
     class Array_ArrayList // массивы ссылочные типы

@@ -74,7 +74,11 @@ namespace ConsoleApp1
             Action<int> testDelC = (x) => { Console.WriteLine(x); };
 
             Hiding.Run();
-            //c.
+            var p = new Person() { Id = 1, Name = "Bmw" };
+            var p1 = p;
+            p.Name = "Mercedes";
+            p = null;
+            Console.WriteLine(p1.Name);
             
         }
     }   

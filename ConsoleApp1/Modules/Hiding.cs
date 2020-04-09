@@ -27,7 +27,7 @@ namespace ConsoleApp1.Modules
     // ======================1===============================
     class HiddingA
     {
-        public void Method()
+        public virtual void Method()
         {
             Console.WriteLine("Method A");
         }
@@ -35,7 +35,7 @@ namespace ConsoleApp1.Modules
 
     class HiddingB : HiddingA
     {
-        new public void Method()
+         public override void Method()
         {
             Console.WriteLine("Method B");
         }
