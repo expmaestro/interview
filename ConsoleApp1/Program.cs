@@ -1,4 +1,6 @@
 ﻿using ConsoleApp1.Modules;
+using ConsoleApp1.Patterns.Behavioral;
+using ConsoleApp1.Patterns.Strategy;
 using ConsoleApp1.Tasks;
 using System;
 using System.Collections;
@@ -56,7 +58,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             // Closure.Run();
-           // new Closure().Run2();
+            // new Closure().Run2();
             // RefOut.Run();
             // Immutable.Run();
             // Polymorphism.Run();
@@ -67,19 +69,31 @@ namespace ConsoleApp1
             //StructRun.Run();
             //Timer t = new  Timer()
             //StructDisposeRun.Run();
-            
+
 
             //Object obj = new Byte[84000];
             //Console.WriteLine(GC.GetGeneration(obj));
-            Action<int> testDelC = (x) => { Console.WriteLine(x); };
+            //Action<int> testDelC = (x) => { Console.WriteLine(x); };
 
-            Hiding.Run();
-            var p = new Person() { Id = 1, Name = "Bmw" };
-            var p1 = p;
-            p.Name = "Mercedes";
-            p = null;
-            Console.WriteLine(p1.Name);
+            //Hiding.Run();
+            //var p = new Person() { Id = 1, Name = "Bmw" };
+            //var p1 = p;
+            //p.Name = "Mercedes";
+            //p = null;
+            //Console.WriteLine(p1.Name);
+
+            Constructor.Run();
+            //  StructRun.Run();
+            Inheritance.Run();
+            //Strategy.Run();
+            //StrategyCalculateWinners.Run();
+            //Events.Run();
+            RefOut.Run();
+
             
+
+
+
         }
     }   
 

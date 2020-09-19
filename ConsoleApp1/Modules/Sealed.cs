@@ -21,7 +21,7 @@ namespace ConsoleApp1.Modules
             }
         }
     }
-    sealed class Sealed : Base
+    sealed class Sealed : Base // запрещаем наследовать Sealed
     {
     }
     //sealed class Sel : Sealed { } - Error

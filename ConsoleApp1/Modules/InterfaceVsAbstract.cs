@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Экземпляр абстрактного класса создать нельзя
+// Конструктор абстрактному классу создавать можно
 namespace ConsoleApp1.Modules
 {
     // если классы относятся к единой системе классификации, то выбирается абстрактный класс. 
@@ -14,6 +16,11 @@ namespace ConsoleApp1.Modules
     // Инт Если нам надо определить функционал для группы разрозненных объектов, которые могут быть никак не связаны между собо
     public abstract class AbstractClass : Abs2
     {
+        
+        public AbstractClass()
+        {
+
+        }
         public abstract string Name { get; set; }
         public string CarName { get; set; }
         public void Speed()
@@ -33,9 +40,13 @@ namespace ConsoleApp1.Modules
     
 
     public abstract class Abs2 {
+        public Abs2()
+        {
+
+        }
         public void Run()
         {
-            //var t = new AbstractClass();
+           // var t = new AbstractClass(); // Экземпляр абстрактного класса создать нельзя
         }
     }
 

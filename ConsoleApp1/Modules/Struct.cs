@@ -10,15 +10,33 @@ namespace ConsoleApp1.Modules
     {
 
     }
-    public struct Struct : IStruct
+
+    public class StructInher
+    {
+
+    }
+    public struct Struct :  IStruct
     {
         // int hours = 1; //error
+        public string Name { get; set; }
         public Struct(string name)
         {
             Name = "1";
+            Console.WriteLine("Struct ctor");
         }
 
-        public string Name { get; set; }
+        public Struct(string text1, string text2)
+        {
+            Name = "1";
+            Console.WriteLine("Struct ctor");
+        }
+
+        static Struct()
+        {
+
+        }
+
+        
 
         public string GetName()
         {
@@ -30,6 +48,11 @@ namespace ConsoleApp1.Modules
             this.Name = n;
             Console.WriteLine(Name);
         }
+    }
+
+    public struct Test
+    {
+
     }
     class  StructRun
     {

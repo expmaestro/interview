@@ -75,13 +75,14 @@ namespace ConsoleApp1.Modules
             Company = company;
         }
         public new void Display()
-        {
+        { 
+            base.Display();
             Console.WriteLine($"{FirstName} {LastName} работает в {Company}");
         }
 
         
     }
 
-    partial class T1 { partial void Test(); }
+ partial class T1 { partial void Test(); }
     partial class T1 { }
 }

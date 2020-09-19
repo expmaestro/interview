@@ -49,10 +49,13 @@
     <Compile Include="Modules\Closure.cs" />
     <Compile Include="Modules\Constructor.cs" />
     <Compile Include="Modules\Delegate.cs" />
+    <Compile Include="Modules\Events.cs" />
     <Compile Include="Modules\FinalizeDispose.cs" />
     <Compile Include="Modules\Hiding.cs" />
     <Compile Include="Modules\Immutable.cs" />
     <Compile Include="Modules\Indexers.cs" />
+    <Compile Include="Modules\Inheritance.cs" />
+    <Compile Include="Modules\Interface.cs" />
     <Compile Include="Modules\InterfaceVsAbstract.cs" />
     <Compile Include="Modules\MulticastDelegate.cs" />
     <Compile Include="Modules\Polymorphism.cs" />
@@ -61,14 +64,24 @@
     <Compile Include="Modules\Struct.cs" />
     <Compile Include="Modules\StructDispose.cs" />
     <Compile Include="Modules\SOLID.cs" />
+    <Compile Include="Modules\TestClass.cs" />
+    <Compile Include="Patterns\Behavioral\Observer.cs" />
+    <Compile Include="Patterns\Behavioral\TemplateMethod.cs" />
     <Compile Include="Patterns\Observer.cs" />
+    <Compile Include="Patterns\Strategy\Strategy.cs" />
+    <Compile Include="Patterns\Strategy\StrategyCalculateWinners.cs" />
+    <Compile Include="Patterns\Strategy\StrategyDelegate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\FindPrevMax.cs" />
+    <Compile Include="Type.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Int.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Patterns\Strategy\strategy.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
