@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Modules
 {
-    //class
-    class Base  { 
-    
+    // 1. запрещаем наследовать Sealed. Мы не можем унаследовать наш класс от Sealed (на нем прервется цепочка наследования )
+    // 2. Также можно запретить переопределение методов и свойств. В этом случае их надо объявлять с модификатором sealed:
+    class Base
+    {
+
         public static void Run()
         {
             C a = new C();
-            a.Second();
+            a.Print();
             var s = new Sealed();
             int k = 1;
-            for(; ; )
+            for (; ; )
             {
 
             }
@@ -27,28 +29,37 @@ namespace ConsoleApp1.Modules
     //sealed class Sel : Sealed { } - Error
     class A
     {
+        public virtual string Name { get; set; }
         public virtual void First() { Console.Write("First"); }
-        public virtual void Second() { Console.WriteLine("Second A"); }
+        public virtual void Print() { Console.WriteLine("Second A"); }
     }
-    class B: A
+    class B : A
     {
-        sealed public override void First()
+        public sealed override string Name { get; set; }
+        //наследники класса не смогут переопределить этот метод так как он sealed
+        public sealed override void First()
         {
             base.First();
         }
 
-        public override void Second()
+        public override void Print()
         {
             Console.WriteLine("Second B");
         }
+
     }
-    class C: B
+    class C : B
     {
-        public override void Second()
+        // public sealed override string Name { get => base.Name; set => base.Name = value; }
+        // can not override B.First() because it is sealed
+        //public override void First()
+        //{
+        //    base.First();
+        //}
+        public override void Print()
         {
-             base.Second();
+            base.Print();
             Console.WriteLine("Second C");
         }
     }
-
 }

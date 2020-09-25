@@ -11,8 +11,9 @@ namespace ConsoleApp1.Modules
 
         public static void Run()
         {
+            Console.WriteLine($"================== Ref Out  ==================");
             string name = "Sasha";
-            Console.WriteLine($"Before default: {name}");           
+            Console.WriteLine($"Before default: {name}");
             Default(name);  //копия переменной будет, переменная не изменится
             Console.WriteLine($"After default: {name}");
             Console.WriteLine("==========================");
@@ -32,6 +33,7 @@ namespace ConsoleApp1.Modules
             Console.WriteLine($"After out: {test}");
 
             ReadOnlnly();
+            Console.WriteLine($"================== End Ref Out  ==================");
         }
 
         public static void Default(string firstName)
@@ -54,6 +56,8 @@ namespace ConsoleApp1.Modules
             ReadOnly r = new ReadOnly("Not Alex constructor change");
             Console.WriteLine(r.Name);
         }
+
+        
     }
 
     public class ReadOnly

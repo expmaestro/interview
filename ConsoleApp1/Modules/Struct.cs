@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Modules
 {
+    // структуры не могут быть родителями, т.е. от них нельзя наследовать
+    // любая структура на уровне Ildasm будет sealed и наследуется от Value.Type
     public interface IStruct
     {
 
@@ -34,9 +36,7 @@ namespace ConsoleApp1.Modules
         static Struct()
         {
 
-        }
-
-        
+        }        
 
         public string GetName()
         {

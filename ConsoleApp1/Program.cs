@@ -1,11 +1,15 @@
-﻿using ConsoleApp1.Modules;
+﻿using ConsoleApp1.Algorithms;
+using ConsoleApp1.Modules;
 using ConsoleApp1.Patterns.Behavioral;
 using ConsoleApp1.Patterns.Strategy;
+using ConsoleApp1.Patterns.Structural;
 using ConsoleApp1.Tasks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Threading;
 
 namespace ConsoleApp1
@@ -57,6 +61,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            SortAlgorithms.Run();
+            // SortAlgorithms.Run();
+            //StackAlgorithm.Run();
+            //  QueueAlgorithm.Run();
             // Closure.Run();
             // new Closure().Run2();
             // RefOut.Run();
@@ -69,6 +77,7 @@ namespace ConsoleApp1
             //StructRun.Run();
             //Timer t = new  Timer()
             //StructDisposeRun.Run();
+
 
 
             //Object obj = new Byte[84000];
@@ -84,17 +93,96 @@ namespace ConsoleApp1
 
             Constructor.Run();
             //  StructRun.Run();
-            Inheritance.Run();
+            // Inheritance.Run();
             //Strategy.Run();
             //StrategyCalculateWinners.Run();
+            // TemplateMethod.Run();
+            // Decorator.Run();
+            // FacadeRun.Run();
+            //Adapter.Run();
             //Events.Run();
-            RefOut.Run();
+            // RefOut.Run();
 
-            
+            ISet<int> set = new HashSet<int> { 1, 2, 3, 4, 5, 1, 2, 3, 88, 5, 543, 534, 5, 43, 1, 1, 1, 1, 1, 1 };
+            Console.WriteLine(string.Join("-", set));
+
+            // GetSet.Run();
+            // Static.Run();
+            // Abstract.Run();
+            //Closure.Run3();
+            //try
+            //{
+            //    Exceptions.Run();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //    Console.WriteLine(ex.StackTrace);
+            //}
+
+            // LongestPrefix.Run();
+            //Action<int, int> fc = null;
+            //fc = (i, max) =>
+            //{
+            //    Console.WriteLine(i);
+            //    if (i < max) fc(++i, max); // рекурсия
+            //};
+            //fc(0, 10);
 
 
+            // IEnum.Run();
+
+            var minivan1 = new Minivan();
+            var sedan1 = new Sedan();
+            var minivan2 = new Minivan();
+            var sedan2 = new Sedan();
+
+            List<Auto> autos = new List<Auto> { new Minivan(), new Sedan(), new Minivan(), new Sedan() };
+            foreach(var auto in autos)
+            {
+                Console.WriteLine(auto.GetName());
+            }
 
         }
-    }   
+
+       
+    }  
+    
+
+    public class Auto
+    {
+        public Auto(string name, int speed)
+        {
+            this.Name = name;
+            this.Speed = speed;
+        }
+        private int Speed { get; set; }
+        private string Name { get; set; }
+        public string GetName()
+        {
+            return $"Марка авто: {Name}";
+        }
+
+        public string GetSpeed()
+        {
+            return $"Авто едет со скоросью: {Speed}";
+        }
+    }
+
+    public class Minivan: Auto
+    {
+        public Minivan(): base("Renault", 100)
+        {
+
+        }
+    }
+
+    public class Sedan: Auto
+    {
+        public Sedan() : base("Bmw", 200)
+        {
+
+        }
+    }
 
 }

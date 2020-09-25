@@ -28,6 +28,8 @@ namespace ConsoleApp1.Modules
             // ================            
 
             Func<int, int, string> sum = (x, y) => { return (x + y).ToString(); };
+            Func<int, int, string> sum2 = (x, y) => (x + y).ToString(); // лямбда выражение (лямбда функция)
+            Func<int, int, string> sum3 = delegate (int x, int y)  { return (x + y).ToString(); };
             Console.WriteLine(sum(4, 9));
             Action<string> action = (x) => { Console.WriteLine(x); };
             action("Hello. My name is M and I write lines.");

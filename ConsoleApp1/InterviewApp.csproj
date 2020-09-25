@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\BinaryThree.cs" />
+    <Compile Include="Algorithms\LinkedList.cs" />
+    <Compile Include="Algorithms\Queue.cs" />
+    <Compile Include="Algorithms\ReverseInteger.cs" />
+    <Compile Include="Algorithms\SortAlgorithms.cs" />
+    <Compile Include="Algorithms\Stack.cs" />
+    <Compile Include="Modules\Abstract.cs" />
     <Compile Include="Modules\AnonymousType.cs" />
     <Compile Include="Modules\Array-ArrayList.cs" />
     <Compile Include="Modules\BoxUnbox.cs" />
@@ -50,8 +61,11 @@
     <Compile Include="Modules\Constructor.cs" />
     <Compile Include="Modules\Delegate.cs" />
     <Compile Include="Modules\Events.cs" />
+    <Compile Include="Modules\Exceptions.cs" />
     <Compile Include="Modules\FinalizeDispose.cs" />
+    <Compile Include="Modules\GetSet.cs" />
     <Compile Include="Modules\Hiding.cs" />
+    <Compile Include="Modules\IEnumerableProgression.cs" />
     <Compile Include="Modules\Immutable.cs" />
     <Compile Include="Modules\Indexers.cs" />
     <Compile Include="Modules\Inheritance.cs" />
@@ -61,27 +75,36 @@
     <Compile Include="Modules\Polymorphism.cs" />
     <Compile Include="Modules\RefOut.cs" />
     <Compile Include="Modules\Sealed.cs" />
+    <Compile Include="Modules\Static.cs" />
     <Compile Include="Modules\Struct.cs" />
     <Compile Include="Modules\StructDispose.cs" />
     <Compile Include="Modules\SOLID.cs" />
-    <Compile Include="Modules\TestClass.cs" />
     <Compile Include="Patterns\Behavioral\Observer.cs" />
     <Compile Include="Patterns\Behavioral\TemplateMethod.cs" />
     <Compile Include="Patterns\Observer.cs" />
     <Compile Include="Patterns\Strategy\Strategy.cs" />
     <Compile Include="Patterns\Strategy\StrategyCalculateWinners.cs" />
     <Compile Include="Patterns\Strategy\StrategyDelegate.cs" />
+    <Compile Include="Patterns\Structural\Adapter.cs" />
+    <Compile Include="Patterns\Structural\Adapters\HomeCatAdapter.cs" />
+    <Compile Include="Patterns\Structural\Adapters\SuperheroesAdapter2.cs" />
+    <Compile Include="Patterns\Structural\Decorator.cs" />
+    <Compile Include="Patterns\Structural\FacadeRun.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\LongestPrefix.cs" />
     <Compile Include="Tasks\FindPrevMax.cs" />
+    <Compile Include="Tasks\TwoSum.cs" />
     <Compile Include="Type.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Int.docx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Patterns\Strategy\strategy.txt" />
+    <Compile Include="TestTask.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -50,5 +50,18 @@ namespace ConsoleApp1.Modules
             }
 
         }
+
+        public static void Run3()
+        {
+            Action action = null;
+
+            for (int cycleCounter = 1; cycleCounter <=4; cycleCounter++)
+            {
+                int buffer = cycleCounter; //избавились от замыкания, благодаря буферу
+                action += () => Console.WriteLine(buffer); // делегату присваиваем наше лямбда выражение             
+            }
+            
+            action();
+        }
     }   
 }

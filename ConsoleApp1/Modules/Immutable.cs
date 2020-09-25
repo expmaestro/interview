@@ -24,7 +24,6 @@ namespace ConsoleApp1.Modules
             key = "second";
             var temp = dic["first"];
             Console.WriteLine(temp);
-
         }
 
     }
