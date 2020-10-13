@@ -29,6 +29,11 @@ namespace ConsoleApp1.Modules
         }
 
         public abstract void Land(int x, int y);
+
+        public void SomeFunction()
+        {
+
+        }
     }
 
     public class TransportShip : BaseShip
@@ -86,6 +91,7 @@ namespace ConsoleApp1.Modules
         {
 
             BaseShip ship = new TransportShip();
+            
             Console.WriteLine(ship.Fight());
         }
     }

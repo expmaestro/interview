@@ -62,7 +62,7 @@ namespace ConsoleApp1.Modules
            
             Console.WriteLine($"Discount {this.Name} 10%");
         }
-        public void GetName()
+        public void  GetName()
         {
             base.GetParentName();
             Console.WriteLine("Apple");

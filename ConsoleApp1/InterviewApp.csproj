@@ -64,6 +64,7 @@
     <Compile Include="Modules\Exceptions.cs" />
     <Compile Include="Modules\FinalizeDispose.cs" />
     <Compile Include="Modules\GetSet.cs" />
+    <Compile Include="Modules\HashSetRun.cs" />
     <Compile Include="Modules\Hiding.cs" />
     <Compile Include="Modules\IEnumerableProgression.cs" />
     <Compile Include="Modules\Immutable.cs" />
@@ -71,8 +72,11 @@
     <Compile Include="Modules\Inheritance.cs" />
     <Compile Include="Modules\Interface.cs" />
     <Compile Include="Modules\InterfaceVsAbstract.cs" />
+    <Compile Include="Modules\ListTest.cs" />
+    <Compile Include="Modules\Lock.cs" />
     <Compile Include="Modules\MulticastDelegate.cs" />
     <Compile Include="Modules\Polymorphism.cs" />
+    <Compile Include="Modules\Protected.cs" />
     <Compile Include="Modules\RefOut.cs" />
     <Compile Include="Modules\Sealed.cs" />
     <Compile Include="Modules\Static.cs" />
@@ -82,9 +86,9 @@
     <Compile Include="Patterns\Behavioral\Observer.cs" />
     <Compile Include="Patterns\Behavioral\TemplateMethod.cs" />
     <Compile Include="Patterns\Observer.cs" />
-    <Compile Include="Patterns\Strategy\Strategy.cs" />
-    <Compile Include="Patterns\Strategy\StrategyCalculateWinners.cs" />
-    <Compile Include="Patterns\Strategy\StrategyDelegate.cs" />
+    <Compile Include="Patterns\Behavioral\Strategy\Strategy.cs" />
+    <Compile Include="Patterns\Behavioral\Strategy\StrategyCalculateWinners.cs" />
+    <Compile Include="Patterns\Behavioral\Strategy\StrategyDelegate.cs" />
     <Compile Include="Patterns\Structural\Adapter.cs" />
     <Compile Include="Patterns\Structural\Adapters\HomeCatAdapter.cs" />
     <Compile Include="Patterns\Structural\Adapters\SuperheroesAdapter2.cs" />
@@ -103,7 +107,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Patterns\Strategy\strategy.txt" />
+    <Content Include="Patterns\Behavioral\Strategy\strategy.txt" />
     <Compile Include="TestTask.cs" />
   </ItemGroup>
   <ItemGroup />

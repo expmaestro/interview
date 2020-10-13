@@ -67,7 +67,7 @@ namespace ConsoleApp1
             //  QueueAlgorithm.Run();
             // Closure.Run();
             // new Closure().Run2();
-            // RefOut.Run();
+            RefOut.Run();
             // Immutable.Run();
             // Polymorphism.Run();
             // FinalizeDispose.Run();
@@ -131,58 +131,32 @@ namespace ConsoleApp1
 
 
             // IEnum.Run();
+            //HashSetRun.Run();
+            // Lock.Run();
+            //var data = new List<Point2D>
+            //{ new Point2D { x = 0, y = 0 },
+            //     new Point2D { x = 3, y = 1 }};
 
-            var minivan1 = new Minivan();
-            var sedan1 = new Sedan();
-            var minivan2 = new Minivan();
-            var sedan2 = new Sedan();
+            //var result = data.Select(s => (double)s.x / (double)s.y).ToList();
 
-            List<Auto> autos = new List<Auto> { new Minivan(), new Sedan(), new Minivan(), new Sedan() };
-            foreach(var auto in autos)
-            {
-                Console.WriteLine(auto.GetName());
-            }
+            //foreach (var r in result)
+            //{
+            //    Console.WriteLine(r.GetType()); // double
+
+            //}
+            //var c = 1;
+            //var cat  = new Cat();
+
+           // ListTest.Run();
 
         }
+
+
 
        
-    }  
+    }
+
     
-
-    public class Auto
-    {
-        public Auto(string name, int speed)
-        {
-            this.Name = name;
-            this.Speed = speed;
-        }
-        private int Speed { get; set; }
-        private string Name { get; set; }
-        public string GetName()
-        {
-            return $"Марка авто: {Name}";
-        }
-
-        public string GetSpeed()
-        {
-            return $"Авто едет со скоросью: {Speed}";
-        }
-    }
-
-    public class Minivan: Auto
-    {
-        public Minivan(): base("Renault", 100)
-        {
-
-        }
-    }
-
-    public class Sedan: Auto
-    {
-        public Sedan() : base("Bmw", 200)
-        {
-
-        }
-    }
-
 }
+
+
